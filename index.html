@@ -2,40 +2,226 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Redirect -->
-  <meta http-equiv="refresh"
-        content="0.2; url=https://choose.creditcard/business?utm_source=px.creditcard&utm_medium=redirect&utm_campaign=creditcard_collection">
+  <title>px.Creditcard – How Crypto Credit-Card Payments Work</title>
+  <meta name="description" content="Understand how crypto-linked credit cards work: on-ramp/off-ramp, conversion, fees, rewards and risks. Independent overview of crypto card payments." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://px.creditcard/" />
 
-  <!-- Canonical -->
-  <link rel="canonical"
-        href="https://choose.creditcard/business?utm_source=px.creditcard&utm_medium=redirect&utm_campaign=creditcard_collection" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="px.Creditcard – Crypto Credit-Card Payments Explained" />
+  <meta property="og:description" content="Learn how crypto credit cards convert your coins to fiat at the point of sale, what fees apply and how rewards are calculated." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://px.creditcard/" />
+  <meta property="og:image" content="https://choose.creditcard/preview.png?utm_source=px.creditcard&utm_medium=referral&utm_campaign=og_image" />
 
-  <!-- SEO -->
-  <meta name="robots" content="noindex,follow">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="px.Creditcard – Crypto Credit-Card Payments Explained" />
+  <meta name="twitter:description" content="Independent explanation of crypto-linked credit cards, conversion paths, fees and tax considerations." />
+  <meta name="twitter:image" content="https://choose.creditcard/preview.png?utm_source=px.creditcard&utm_medium=referral&utm_campaign=twitter_image" />
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FE63JQ3H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config','G-64FE63JQ3H',{
-      'page_title':'Redirect px.creditcard',
-      'page_path':'/redirect/px.creditcard'
-    });
+    gtag('config', 'G-64FE63JQ3H');
   </script>
 
-  <!-- Background -->
-  <style>
-    html,body {
-      background:#020617;
-      color:#020617;
-      margin:0;
-      height:100vh;
-    }
-  </style>
+  <!-- Tailwind for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your shared minisite styles -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-<body></body>
+<body class="bg-slate-950 text-slate-100">
+  <header class="site-header">
+    <div class="nav-inner max-w-6xl">
+      <div class="brand">
+        <div class="cc-logo">CC</div>
+        <div class="brand-text">
+          <div class="brand-title">px.Creditcard</div>
+          <div class="brand-subtitle">Crypto Credit-Card Payments Explained</div>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#mechanics">How It Works</a>
+        <a href="#compare">Compare</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cc-page">
+    <!-- Breadcrumb -->
+    <div class="cc-breadcrumb">
+      <a href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=breadcrumb">Home</a>
+      &nbsp;›&nbsp;
+      px.Creditcard
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>How Crypto Credit-Card Payments Actually Work</h1>
+        <p class="hero-lead">
+          Crypto credit cards promise “spend your coins anywhere”. Here’s what really happens when you tap at the terminal — from conversion and spreads to rewards and tax questions.
+        </p>
+        <a class="cta" href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=hero_cta">
+          Compare crypto-friendly credit cards
+        </a>
+      </div>
+    </section>
+
+    <!-- Content sections -->
+    <section id="overview" class="section">
+      <h2>What is a Crypto Credit Card?</h2>
+      <p>A crypto credit card looks and behaves like a normal Visa, Mastercard or similar, but is connected to a crypto wallet or exchange account. At the point of sale, your crypto is converted to fiat currency, which is used to settle the transaction with the card network.</p>
+      <p>Most products are not truly “on-chain at checkout”. Instead, the issuer or partner exchange sells a small amount of your crypto in real time or in batched lots, then uses fiat rails for settlement.</p>
+    </section>
+
+    <section id="mechanics" class="section">
+      <h2>How CryptoPay Transactions Flow</h2>
+      <p>When you tap or insert the card, the terminal sends a standard authorization request. Behind the scenes, the issuer or partner platform checks your crypto balance, reserves funds, converts to fiat and approves or declines the transaction.</p>
+      <p>Conversion may use a spot-rate at the time of purchase, plus a spread and possible extra fees. Some products convert proactively (preload), while others convert “just in time” for each transaction.</p>
+    </section>
+
+    <section class="section">
+      <h2>Fees, Spreads and Hidden Costs</h2>
+      <p>Crypto cards can include exchange spreads, FX margins, network fees and issuer fees. Many marketing pages highlight rewards but downplay spreads on conversion, which can easily exceed 2–3% depending on liquidity and volatility.</p>
+      <p>Always read the fee schedule: look for explicit crypto-conversion fees, FX fees for foreign transactions, ATM withdrawal fees and any additional service charges from the linked exchange.</p>
+    </section>
+
+    <section class="section">
+      <h2>Rewards, Cashbacks and Token Incentives</h2>
+      <p>Rewards may be paid as cash, points or native platform tokens. Some issuers offer higher rates when you stake a token or hold a minimum balance, but this concentrates risk in a single ecosystem.</p>
+      <p>Compare rewards after fees: a 3% token reward is less attractive if you are losing 2–3% on spreads and FX every time you use the card.</p>
+    </section>
+
+    <section class="section">
+      <h2>Risk, Volatility and Tax Considerations</h2>
+      <p>Every time you convert crypto to fiat you may trigger a taxable event in your jurisdiction. That means daily spending could generate a large number of small taxable disposals.</p>
+      <p>Volatility can also work against you. If the market moves sharply between loading and spending, the real purchasing power of your holdings changes — regardless of the headline reward rate.</p>
+    </section>
+
+    <!-- Comparison block -->
+    <section id="compare" class="section">
+      <h2>Compare Crypto Credit-Card Features</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>What to Look For</th>
+              <th>Why It Matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Conversion Model</td>
+              <td>Real-time vs. preloaded, clear explanation</td>
+              <td>Determines when spreads and rates are locked in.</td>
+            </tr>
+            <tr>
+              <td>Fees &amp; Spreads</td>
+              <td>Transparent published schedule, no hidden surcharges</td>
+              <td>Small spreads can eat most of the advertised rewards.</td>
+            </tr>
+            <tr>
+              <td>Rewards Structure</td>
+              <td>Cash vs. points vs. tokens, caps and tiers</td>
+              <td>Impacts the real value of each transaction you make.</td>
+            </tr>
+            <tr>
+              <td>Supported Assets</td>
+              <td>Range of coins, stablecoins, and limits per asset</td>
+              <td>More choice can mean better stability and flexibility.</td>
+            </tr>
+            <tr>
+              <td>Compliance &amp; Reporting</td>
+              <td>Statements, tax reports, export options</td>
+              <td>Helps you document conversions and manage obligations.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">
+        For live product-by-product comparisons, visit
+        <a href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=comparison_section">
+          Choose.Creditcard
+        </a>.
+      </p>
+    </section>
+
+    <!-- Cluster links -->
+    <section class="section">
+      <h2>Explore Related Payment Technologies</h2>
+      <div class="cluster-grid">
+        <a class="cluster-card" href="https://bitcoinpay.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_bitcoinpay">
+          <h3>BitcoinPay.Creditcard</h3>
+          <p>Bitcoin card payments and settlement patterns.</p>
+        </a>
+        <a class="cluster-card" href="https://btcpay.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_btcpay">
+          <h3>BTCPay.Creditcard</h3>
+          <p>Merchant-side BTC processing and gateways.</p>
+        </a>
+        <a class="cluster-card" href="https://tokens.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_tokens">
+          <h3>Tokens.Creditcard</h3>
+          <p>Tokenized rewards, governance tokens and incentives.</p>
+        </a>
+        <a class="cluster-card" href="https://defipay.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_defipay">
+          <h3>DefiPay.Creditcard</h3>
+          <p>DeFi-linked card products and yield routing.</p>
+        </a>
+        <a class="cluster-card" href="https://virtualpay.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_virtualpay">
+          <h3>VirtualPay.Creditcard</h3>
+          <p>Virtual cards and wallet-based payment flows.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Collection section -->
+    <section class="section">
+      <h2>Part of The CreditCard Collection</h2>
+      <p class="small">
+        px.Creditcard is one spoke in <strong>The CreditCard Collection</strong> — a network of focused microsites operated by ronarn AS. Each site explains a single payment concept in clear language and then connects you to independent comparison tools.
+      </p>
+      <p class="small">
+        We do not issue cards. We summarize documentation, highlight trade-offs and link to external providers where you can read the full terms yourself.
+      </p>
+      <p class="small">
+        This site is informational only and does not provide financial, investment or tax advice. Always review official documentation and consider seeking independent advice if needed.
+      </p>
+
+      <!-- Root hub snippet -->
+      <div class="hub-link">
+        <a href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=minisite_to_hub"
+           class="text-sm text-slate-600 hover:text-slate-900">
+          Learn more at the Choose.Creditcard
+        </a>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section">
+      <h2>Ready to Compare Crypto-Friendly Cards?</h2>
+      <p class="small">
+        Use px.Creditcard to understand the mechanics — then head over to the main comparison hub to see which cards currently support crypto, stablecoins or on-ramp/off-ramp integrations.
+      </p>
+      <a class="cta" href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=bottom_cta">
+        Go to Choose.Creditcard
+      </a>
+    </section>
+  </main>
+
+  <footer class="mini-footer">
+    <p class="mini-footer-main">© 2025 The CreditCard Collection — ronarn AS</p>
+    <p class="mini-footer-contact">
+      Contact: <a href="mailto:support@cc.creditcard">support@cc.creditcard</a>
+    </p>
+  </footer>
+</body>
 </html>
