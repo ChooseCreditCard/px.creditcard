@@ -4,22 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>px.Creditcard – How Crypto Credit-Card Payments Work</title>
-  <meta name="description" content="Understand how crypto-linked credit cards work: on-ramp/off-ramp, conversion, fees, rewards and risks. Independent overview of crypto card payments." />
+  <title>Px.Creditcard – Processing, Exchanges & Settlement Layers Explained</title>
+  <meta name="description" content="How card transactions move across processing exchanges (PX): routing, authorisation, clearing, settlement and network-to-network translation. Educational breakdown of the PX layer behind modern credit-card systems." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://px.creditcard/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="px.Creditcard – Crypto Credit-Card Payments Explained" />
-  <meta property="og:description" content="Learn how crypto credit cards convert your coins to fiat at the point of sale, what fees apply and how rewards are calculated." />
+  <meta property="og:title" content="Px.Creditcard – Processing Exchange in Card Payments" />
+  <meta property="og:description" content="Learn how processing exchanges (PX) connect banks, networks and fintechs — enabling authorisation routing, clearing and settlement across multiple systems." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://px.creditcard/" />
   <meta property="og:image" content="https://choose.creditcard/preview.png?utm_source=px.creditcard&utm_medium=referral&utm_campaign=og_image" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="px.Creditcard – Crypto Credit-Card Payments Explained" />
-  <meta name="twitter:description" content="Independent explanation of crypto-linked credit cards, conversion paths, fees and tax considerations." />
+  <meta name="twitter:title" content="Px.Creditcard – Processing Exchange in Card Payments" />
+  <meta name="twitter:description" content="Neutral explainer of PX systems: routing, network translation, settlement batches, and cross-system mapping." />
   <meta name="twitter:image" content="https://choose.creditcard/preview.png?utm_source=px.creditcard&utm_medium=referral&utm_campaign=twitter_image" />
 
   <!-- GA4 -->
@@ -31,197 +31,203 @@
     gtag('config', 'G-64FE63JQ3H');
   </script>
 
-  <!-- Tailwind for utility classes -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Your shared minisite styles -->
+  <!-- Shared minisite CSS -->
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body class="bg-slate-950 text-slate-100">
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="nav-inner max-w-6xl">
       <div class="brand">
         <div class="cc-logo">CC</div>
         <div class="brand-text">
-          <div class="brand-title">px.Creditcard</div>
-          <div class="brand-subtitle">Crypto Credit-Card Payments Explained</div>
+          <div class="brand-title">Px.Creditcard</div>
+          <div class="brand-subtitle">Processing Exchange Systems</div>
         </div>
       </div>
-      <nav class="nav-links" aria-label="Page navigation">
+      <nav class="nav-links">
         <a href="#overview">Overview</a>
-        <a href="#mechanics">How It Works</a>
-        <a href="#compare">Compare</a>
+        <a href="#routing">Routing</a>
+        <a href="#settlement">Settlement</a>
       </nav>
     </div>
   </header>
 
   <main class="cc-page">
-    <!-- Breadcrumb -->
+
+    <!-- BREADCRUMB -->
     <div class="cc-breadcrumb">
       <a href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=breadcrumb">Home</a>
-      &nbsp;›&nbsp;
-      px.Creditcard
+      &nbsp;›&nbsp; Px.Creditcard
     </div>
 
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-content">
-        <h1>How Crypto Credit-Card Payments Actually Work</h1>
+        <h1>The Processing Exchange Layer Behind Every Card Payment</h1>
         <p class="hero-lead">
-          Crypto credit cards promise “spend your coins anywhere”. Here’s what really happens when you tap at the terminal — from conversion and spreads to rewards and tax questions.
+          PX (Processing Exchange) platforms sit between issuers, acquirers, networks and fintech providers.
+          They route authorisations, translate message formats, aggregate clearing files and coordinate settlement flows.
         </p>
-        <a class="cta" href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=hero_cta">
-          Compare crypto-friendly credit cards
-        </a>
+
+        <div class="flex flex-wrap gap-3 mt-4">
+          <a class="cta" href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cta_top">
+            Compare cards at Choose.Creditcard
+          </a>
+          <a class="cta-secondary" href="https://choose.creditcard/technology/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cta_tech">
+            Explore Technology Hub
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Content sections -->
+    <!-- OVERVIEW -->
     <section id="overview" class="section">
-      <h2>What is a Crypto Credit Card?</h2>
-      <p>A crypto credit card looks and behaves like a normal Visa, Mastercard or similar, but is connected to a crypto wallet or exchange account. At the point of sale, your crypto is converted to fiat currency, which is used to settle the transaction with the card network.</p>
-      <p>Most products are not truly “on-chain at checkout”. Instead, the issuer or partner exchange sells a small amount of your crypto in real time or in batched lots, then uses fiat rails for settlement.</p>
+      <h2>What Is a Processing Exchange (PX)?</h2>
+      <p>
+        A PX system acts as the “glue” layer between different payment systems. Authorisation messages,
+        clearing records and settlement files don’t always follow the same formats or routing paths.
+        PX platforms translate, normalise and deliver these data streams so card payments function across banks,
+        networks and fintech APIs.
+      </p>
+
+      <ul class="list-disc pl-5 mt-3 space-y-2">
+        <li>Translates formats (ISO8583 ↔ API-based messaging).</li>
+        <li>Routes traffic to the correct issuer, acquirer or network.</li>
+        <li>Aggregates clearing entries into settlement batches.</li>
+        <li>Ensures end-to-end message integrity and reconciliation.</li>
+      </ul>
     </section>
 
-    <section id="mechanics" class="section">
-      <h2>How CryptoPay Transactions Flow</h2>
-      <p>When you tap or insert the card, the terminal sends a standard authorization request. Behind the scenes, the issuer or partner platform checks your crypto balance, reserves funds, converts to fiat and approves or declines the transaction.</p>
-      <p>Conversion may use a spot-rate at the time of purchase, plus a spread and possible extra fees. Some products convert proactively (preload), while others convert “just in time” for each transaction.</p>
-    </section>
+    <!-- ROUTING -->
+    <section id="routing" class="section">
+      <h2>How PX Routing Works</h2>
+      <p>When you tap your card, the terminal sends an authorisation request. PX platforms ensure it reaches the correct issuer:</p>
 
-    <section class="section">
-      <h2>Fees, Spreads and Hidden Costs</h2>
-      <p>Crypto cards can include exchange spreads, FX margins, network fees and issuer fees. Many marketing pages highlight rewards but downplay spreads on conversion, which can easily exceed 2–3% depending on liquidity and volatility.</p>
-      <p>Always read the fee schedule: look for explicit crypto-conversion fees, FX fees for foreign transactions, ATM withdrawal fees and any additional service charges from the linked exchange.</p>
-    </section>
-
-    <section class="section">
-      <h2>Rewards, Cashbacks and Token Incentives</h2>
-      <p>Rewards may be paid as cash, points or native platform tokens. Some issuers offer higher rates when you stake a token or hold a minimum balance, but this concentrates risk in a single ecosystem.</p>
-      <p>Compare rewards after fees: a 3% token reward is less attractive if you are losing 2–3% on spreads and FX every time you use the card.</p>
-    </section>
-
-    <section class="section">
-      <h2>Risk, Volatility and Tax Considerations</h2>
-      <p>Every time you convert crypto to fiat you may trigger a taxable event in your jurisdiction. That means daily spending could generate a large number of small taxable disposals.</p>
-      <p>Volatility can also work against you. If the market moves sharply between loading and spending, the real purchasing power of your holdings changes — regardless of the headline reward rate.</p>
-    </section>
-
-    <!-- Comparison block -->
-    <section id="compare" class="section">
-      <h2>Compare Crypto Credit-Card Features</h2>
-      <div class="table-wrap">
+      <div class="table-wrap mt-4">
         <table class="table">
           <thead>
             <tr>
-              <th>Feature</th>
-              <th>What to Look For</th>
+              <th>Routing Step</th>
+              <th>Description</th>
               <th>Why It Matters</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Conversion Model</td>
-              <td>Real-time vs. preloaded, clear explanation</td>
-              <td>Determines when spreads and rates are locked in.</td>
+              <td>Network Intake</td>
+              <td>The request arrives via Visa/Mastercard rails or a local scheme.</td>
+              <td>Determines which routing rules apply.</td>
             </tr>
             <tr>
-              <td>Fees &amp; Spreads</td>
-              <td>Transparent published schedule, no hidden surcharges</td>
-              <td>Small spreads can eat most of the advertised rewards.</td>
+              <td>Issuer Identification</td>
+              <td>PX inspects BIN/IIN metadata to identify the issuing bank.</td>
+              <td>Ensures correct risk rules and fraud checks.</td>
             </tr>
             <tr>
-              <td>Rewards Structure</td>
-              <td>Cash vs. points vs. tokens, caps and tiers</td>
-              <td>Impacts the real value of each transaction you make.</td>
+              <td>Translation</td>
+              <td>Converts message formats for internal issuer systems.</td>
+              <td>Keeps legacy and modern systems compatible.</td>
             </tr>
             <tr>
-              <td>Supported Assets</td>
-              <td>Range of coins, stablecoins, and limits per asset</td>
-              <td>More choice can mean better stability and flexibility.</td>
-            </tr>
-            <tr>
-              <td>Compliance &amp; Reporting</td>
-              <td>Statements, tax reports, export options</td>
-              <td>Helps you document conversions and manage obligations.</td>
+              <td>Return Path</td>
+              <td>Authorisation response travels back the same chain.</td>
+              <td>Dictates approval speed and reliability.</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="small">
-        For live product-by-product comparisons, visit
-        <a href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=comparison_section">
-          Choose.Creditcard
-        </a>.
+
+      <p class="small mt-3">
+        Faster routing = fewer declines, fewer delays, and a noticeably better cardholder experience.
       </p>
     </section>
 
-    <!-- Cluster links -->
+    <!-- SETTLEMENT -->
+    <section id="settlement" class="section">
+      <h2>PX in Clearing & Settlement</h2>
+      <p>
+        After a transaction is authorised, PX systems manage the clearing and settlement processes:
+      </p>
+
+      <ul class="list-disc pl-5 mt-3 space-y-2">
+        <li><strong>Clearing aggregation:</strong> Merchant acquirer files are normalized and validated.</li>
+        <li><strong>Fee application:</strong> Scheme fees, interchange and margins are calculated.</li>
+        <li><strong>Net settlement:</strong> PX orchestrates payouts and collections between entities.</li>
+        <li><strong>Reconciliation:</strong> Matches clearing entries to earlier authorisations.</li>
+      </ul>
+
+      <p class="mt-3">
+        Without PX, cross-platform payment flows would break. PX ensures transactions lifecycle cleanly from approval → clearing → settlement → posting.
+      </p>
+    </section>
+
+    <!-- RELATED TECHNOLOGY CLUSTERS -->
     <section class="section">
-      <h2>Explore Related Payment Technologies</h2>
+      <h2>Explore Related Card-Technology Minisites</h2>
+
       <div class="cluster-grid">
-        <a class="cluster-card" href="https://bitcoinpay.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_bitcoinpay">
-          <h3>BitcoinPay.Creditcard</h3>
-          <p>Bitcoin card payments and settlement patterns.</p>
+        <a class="cluster-card" href="https://bin.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_bin">
+          <h3>Bin.Creditcard</h3>
+          <p>How BIN ranges define routing, risk and pricing.</p>
         </a>
-        <a class="cluster-card" href="https://btcpay.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_btcpay">
-          <h3>BTCPay.Creditcard</h3>
-          <p>Merchant-side BTC processing and gateways.</p>
+
+        <a class="cluster-card" href="https://network.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_network">
+          <h3>Network.Creditcard</h3>
+          <p>The role of card networks in global authorisation flows.</p>
         </a>
-        <a class="cluster-card" href="https://tokens.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_tokens">
-          <h3>Tokens.Creditcard</h3>
-          <p>Tokenized rewards, governance tokens and incentives.</p>
+
+        <a class="cluster-card" href="https://bx.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_bx">
+          <h3>Bx.Creditcard</h3>
+          <p>Back-office posting, settlement cycles and reconciliation.</p>
         </a>
-        <a class="cluster-card" href="https://defipay.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_defipay">
-          <h3>DefiPay.Creditcard</h3>
-          <p>DeFi-linked card products and yield routing.</p>
-        </a>
-        <a class="cluster-card" href="https://virtualpay.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_virtualpay">
-          <h3>VirtualPay.Creditcard</h3>
-          <p>Virtual cards and wallet-based payment flows.</p>
+
+        <a class="cluster-card" href="https://fin.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=cluster_fin">
+          <h3>Fin.Creditcard</h3>
+          <p>Modern virtual cards, tap-to-pay, tokenization & wallets.</p>
         </a>
       </div>
     </section>
 
-    <!-- Collection section -->
+    <!-- HUB SNIPPET -->
     <section class="section">
       <h2>Part of The CreditCard Collection</h2>
       <p class="small">
-        px.Creditcard is one spoke in <strong>The CreditCard Collection</strong> — a network of focused microsites operated by ronarn AS. Each site explains a single payment concept in clear language and then connects you to independent comparison tools.
-      </p>
-      <p class="small">
-        We do not issue cards. We summarize documentation, highlight trade-offs and link to external providers where you can read the full terms yourself.
-      </p>
-      <p class="small">
-        This site is informational only and does not provide financial, investment or tax advice. Always review official documentation and consider seeking independent advice if needed.
+        Px.Creditcard is part of an independent educational network operated by ronarn AS.
+        Each minisite explains one component of how card payments work — always neutral, always documentation-based.
       </p>
 
-      <!-- Root hub snippet -->
-      <div class="hub-link">
+      <div class="hub-link mt-4">
         <a href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=minisite_to_hub"
-           class="text-sm text-slate-600 hover:text-slate-900">
-          Learn more at the Choose.Creditcard
+           class="text-sm text-slate-300 hover:text-slate-50">
+          Explore all hubs at Choose.Creditcard
         </a>
       </div>
     </section>
 
-    <!-- Bottom CTA -->
+    <!-- BOTTOM CTA -->
     <section class="section">
-      <h2>Ready to Compare Crypto-Friendly Cards?</h2>
-      <p class="small">
-        Use px.Creditcard to understand the mechanics — then head over to the main comparison hub to see which cards currently support crypto, stablecoins or on-ramp/off-ramp integrations.
-      </p>
+      <h2>Ready to Learn More?</h2>
+      <p class="small">Use Px.Creditcard to understand the processing layer — then continue exploring the ecosystem through the other minisites.</p>
       <a class="cta" href="https://choose.creditcard/?utm_source=px.creditcard&utm_medium=referral&utm_campaign=bottom_cta">
         Go to Choose.Creditcard
       </a>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="mini-footer">
     <p class="mini-footer-main">© 2025 The CreditCard Collection — ronarn AS</p>
     <p class="mini-footer-contact">
       Contact: <a href="mailto:support@cc.creditcard">support@cc.creditcard</a>
     </p>
   </footer>
+
 </body>
 </html>
